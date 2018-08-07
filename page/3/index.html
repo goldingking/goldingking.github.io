@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://goldingking.github.com">
-  <title>Tag: px | 筋斗云</title>
+  <title>筋斗云</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="筋斗云">
-<meta property="og:url" content="http://goldingking.github.com/tags/px/index.html">
+<meta property="og:url" content="http://goldingking.github.com/page/3/index.html">
 <meta property="og:site_name" content="筋斗云">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -142,73 +142,110 @@
           <div id="js-content" class="content-ll">
             
   
-  
+    <article id="post-fetch-body-not-posted" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/04/H5多屏幕适配/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.030Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/04/H5多屏幕适配/">h5多屏适配</a>
+      <a class="article-title" href="/2017/04/14/fetch-body-not-posted/">fetch body not posted</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/04/14/fetch-body-not-posted/" class="archive-article-date">
+  	<time datetime="2017-04-14T06:52:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I use fetch to do a post request with some json data, but the data is not posted at all, I check the network part from chrome dev tool and don’t find any data attached to the request.</p>
+<p>After checking old projects, I find that it’s using JSON.stringify() to convert json data to string before assign it to body field.</p>
+<p>I check the fetch Doc, find below:</p>
+<blockquote>
+<p><em>Both requests and responses may contain body data. A body is an instance of any of the following types:</em></p>
+</blockquote>
+<ul>
+<li>ArrayBuffer</li>
+<li>ArrayBufferView (Uint8Array and friends)</li>
+<li>Blob/File</li>
+<li>string</li>
+<li>URLSearchParams</li>
+<li>FormData</li>
+</ul>
+<p>So the string is valid and json object is not.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">px</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">rem</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/h5/" class="article-tag-list-link color3">h5</a>
+        			<a href="/categories/Javascript/" class="article-tag-list-link color1">Javascript</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/14/fetch-body-not-posted/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
+  
 
 
           </div>
@@ -230,10 +267,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
+		isHome: true,
 		isPost: false,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

@@ -142,6 +142,179 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-web前端高清方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/08/web前端高清方案/">web前端高清方案</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/08/web前端高清方案/" class="archive-article-date">
+  	<time datetime="2018-08-07T17:01:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>现在的手机的屏幕像素密度都很高，dpr一般都是大于等于2的。<br>
+我们以前在普通屏幕上用来显示1px的线条是使用一个物理像素来显示的，现在在高清屏幕上都是用<br>
+2个甚至3个像素来显示了。跟手机上的其他元素比起来，就会感觉很粗，影响美观。</p>
+<p>如何使用1个物理像素来表示1px？<br>
+可以自己局部缩放，也可以页面整体缩放。页面整体缩放就需要用到meta标签，也要结合rem单位的<br>
+使用，先把元素的高宽和间距放大dpr倍，然后再使用meta标签缩小dpr倍，达到高清的目的。</p>
+<p>参考链接 https://div.io/topic/1092</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/08/web前端高清方案/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-手机web网页的多屏适配" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/07/手机web网页的多屏适配/">手机web网页的多屏适配</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/07/手机web网页的多屏适配/" class="archive-article-date">
+  	<time datetime="2018-08-07T15:08:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们知道，手机的分辨率特别多。如果我们在一个iphone5（宽320px）放置一个可以占满全屏宽度<br>
+的div, div的宽度是320px，那么这个div在iphone6（宽375）上面的显示效果就无法占满全屏宽度<br>
+而是右边留了很大的空白。</p>
+<p>多屏适配的目的就是让页面在不同手机分辨率下面，展示类似的效果，如上面的列子，在iphone6下<br>
+我依然想让div在宽度上充满整个屏幕。</p>
+<p>想达到这个效果其实有很多办法，比如使用相对的宽度如100%，这样在所有屏幕上都是充满的。</p>
+<p>一个页面在小屏幕上是占满整个空间的，页面元素之间的间距和元素的大小是有一定比例的，这种比<br>
+例下看起来比较协调。现在这个页面放到一个的大尺寸手机上面，如果通过我相对布局的方式实现了<br>
+适配，那么元素的大小的不会变，但是元素之间的间距发生了变化，使整个页面的协调性下降。我们<br>
+更想看到的是整个页面整体的放大，这样协调性不会被破坏。</p>
+<p>那如何实现整体的放大呢？这里有个方案是使用rem，将所有页面元素的大小和元素之间的间距用rem<br>
+来表示，rem是相对html元素的font-size的大小。我们可以通过动态设置html的font-size来改变<br>
+整个页面的元素大小和元素间距，达到适配多种分辨率的目的。</p>
+<p>还有一种方式，是通过视口的缩放来达到整体放大的目的，一开始将视口的大小设置为视觉稿的大小<br>
+按视觉稿实现了页面后，再动态的根据不同设备的视口宽度，来动态改变视口的缩放比例，让页面达<br>
+到多屏适配的目的。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">多屏适配</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/07/手机web网页的多屏适配/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-viewport的作用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -194,6 +367,10 @@ user-scalable=0 不允许用户进行缩放</p>
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">viewport</a>
         		</li>
       		
 		</ul>
@@ -426,6 +603,114 @@ Group by的select关键字跟的列只能是用来表示这个分组的信息，
 
 
   
+    <article id="post-斧头的隐喻" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/04/斧头的隐喻/">斧头的隐喻</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/04/斧头的隐喻/" class="archive-article-date">
+  	<time datetime="2018-08-04T01:07:22.055Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>原文地址：http://ibmsystemsmag.blogs.com/you_and_i/2012/03/a-metaphorical-axe-and-your-software.html</p>
+</blockquote>
+<p>今天的blog包含一个暗喻，也是一个故事，它的灵感来自于在威斯康星州举行的中级计算机专业联合会议中的<br>
+圆桌会议上的一次谈话。</p>
+<p>Andy和Bob都是伐木工人，为了决出谁砍树的速度更快，他们进入了一片荒原进行比赛。在一片大森林的中间，<br>
+每个人都得到一套露营工具和一把斧头，并且被告知，他们每天都可以尽其所能的砍树，树的大小有一个可接受<br>
+的标准，月底的时候谁砍的树多谁就是胜利者。第一天,Andy和Bob在同一时刻开始行动 — 黎明。知道夜间<br>
+砍树会相当危险，Andy决心坚持砍树一直到太阳落山，但是他注意到Bob在日落之前早些时候就停止了行动。<br>
+Andy感觉很开心，确信这意味着Bob不如自己强壮。Andy就这样费力地干到了天黑，在这之后一会儿，他砍<br>
+的树在数量上具有了一个不错的领先位置。</p>
+<p>几天就这样过去了，Bob总是在Andy之前收工，而Andy还是一如既往的努力着。Andy每天结束工作的时候<br>
+都非常疲惫，但是他对自己保持的领先位置感到非常欣慰。<br>
+到了第二周过了一半的时候，Andy发现Bob正在追赶上来。由于某种原因，Bob每天可以比Andy砍倒更多<br>
+的树了，Andy有一些沮丧。怎么会发生这种情况呢？</p>
+<p>就这样，在第二周结束的时候，Andy跟随Bob来到了Bob的营地去查看Bob在不砍树的时候都在做什么。<br>
+那么Bob到底在做什么呢？<br>
+他正在打磨自己的斧子。</p>
+<p>现在，没有很好的隐喻或者类比。我的隐喻中有一个明显的瑕疵，如果你思考我的故事的第一句话：<br>
+“Andy和Bob是伐木工人”。如果你真的是伐木工人的话，你必然知道你需要清理和打磨你的斧子。废话。<br>
+如果Andy和Bob是IT managers，他们的“斧子”就是他们各自的IT部门负责的软件，Andy认为只要能<br>
+翻来覆去地使用你的斧头就可以保持竞争力，Bob的认识则完全不同，他认为你需要投入一定的时间来<br>
+打磨“斧头”。无论你的软件在刚刚购买或者编写完成时是多么优秀，想方设法使软件变得更好的竞争一直存在。<br>
+如果你不这样做，你的“斧头”将会钝下来，至少和你的竞争者的“斧头”相比是这样。</p>
+<p>坦白地说，我非常惊骇于一些公司认为的“软件是固定资产”，和“如果不影响使用就不必fix”这样的态度。<br>
+软件并不是一种固定资产，它需要随着时间推移而不断更新。但这不是一种消耗,而是一种投资。<br>
+软件 — 编写好的任何软件，总之，随着时间流逝填加新特性、对新的语言和操作系统的支持，将会使其增值。<br>
+更深一步说，伐木工人运用斧头也取得了价值，因为他投入了时间去了解他的工具是怎样工作的以及如何改进。<br>
+Bob适合做一名IT manager，Andy也可以做，也可以不做，只要他愿意。Andy只会通过控制员工数量，<br>
+并且不支持对软件做必要的更新，来把成本控制在一个底线上，直到没有任何人能再“砍倒任何一棵树”。<br>
+那时Andy的老板将会炒掉他，而雇佣两个坏小子，一睹他们如何工作。这将付出更大的代价，很显然“斧头”<br>
+不是一个好工具。</p>
+<p>或许使用斧头的人需要把它用的更好？<br>
+记住—最终，它是你的“斧头”。<br>
+我只是说说。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/寓言/" class="article-tag-list-link color3">寓言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/04/斧头的隐喻/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-快捷键的思考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -534,61 +819,35 @@ command+alt+D ，进入搜索页面。 这些快捷键都可以在配置中找�
 
 
   
-    <article id="post-斧头的隐喻" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-取模和取余" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/斧头的隐喻/">斧头的隐喻</a>
+      <a class="article-title" href="/2018/08/04/取模和取余/">取余和取模</a>
     </h1>
   
 
         
-        <a href="/2018/08/04/斧头的隐喻/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.055Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
+        <a href="/2018/08/04/取模和取余/" class="archive-article-date">
+  	<time datetime="2018-08-04T01:07:22.043Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>原文地址：http://ibmsystemsmag.blogs.com/you_and_i/2012/03/a-metaphorical-axe-and-your-software.html</p>
-</blockquote>
-<p>今天的blog包含一个暗喻，也是一个故事，它的灵感来自于在威斯康星州举行的中级计算机专业联合会议中的<br>
-圆桌会议上的一次谈话。</p>
-<p>Andy和Bob都是伐木工人，为了决出谁砍树的速度更快，他们进入了一片荒原进行比赛。在一片大森林的中间，<br>
-每个人都得到一套露营工具和一把斧头，并且被告知，他们每天都可以尽其所能的砍树，树的大小有一个可接受<br>
-的标准，月底的时候谁砍的树多谁就是胜利者。第一天,Andy和Bob在同一时刻开始行动 — 黎明。知道夜间<br>
-砍树会相当危险，Andy决心坚持砍树一直到太阳落山，但是他注意到Bob在日落之前早些时候就停止了行动。<br>
-Andy感觉很开心，确信这意味着Bob不如自己强壮。Andy就这样费力地干到了天黑，在这之后一会儿，他砍<br>
-的树在数量上具有了一个不错的领先位置。</p>
-<p>几天就这样过去了，Bob总是在Andy之前收工，而Andy还是一如既往的努力着。Andy每天结束工作的时候<br>
-都非常疲惫，但是他对自己保持的领先位置感到非常欣慰。<br>
-到了第二周过了一半的时候，Andy发现Bob正在追赶上来。由于某种原因，Bob每天可以比Andy砍倒更多<br>
-的树了，Andy有一些沮丧。怎么会发生这种情况呢？</p>
-<p>就这样，在第二周结束的时候，Andy跟随Bob来到了Bob的营地去查看Bob在不砍树的时候都在做什么。<br>
-那么Bob到底在做什么呢？<br>
-他正在打磨自己的斧子。</p>
-<p>现在，没有很好的隐喻或者类比。我的隐喻中有一个明显的瑕疵，如果你思考我的故事的第一句话：<br>
-“Andy和Bob是伐木工人”。如果你真的是伐木工人的话，你必然知道你需要清理和打磨你的斧子。废话。<br>
-如果Andy和Bob是IT managers，他们的“斧子”就是他们各自的IT部门负责的软件，Andy认为只要能<br>
-翻来覆去地使用你的斧头就可以保持竞争力，Bob的认识则完全不同，他认为你需要投入一定的时间来<br>
-打磨“斧头”。无论你的软件在刚刚购买或者编写完成时是多么优秀，想方设法使软件变得更好的竞争一直存在。<br>
-如果你不这样做，你的“斧头”将会钝下来，至少和你的竞争者的“斧头”相比是这样。</p>
-<p>坦白地说，我非常惊骇于一些公司认为的“软件是固定资产”，和“如果不影响使用就不必fix”这样的态度。<br>
-软件并不是一种固定资产，它需要随着时间推移而不断更新。但这不是一种消耗,而是一种投资。<br>
-软件 — 编写好的任何软件，总之，随着时间流逝填加新特性、对新的语言和操作系统的支持，将会使其增值。<br>
-更深一步说，伐木工人运用斧头也取得了价值，因为他投入了时间去了解他的工具是怎样工作的以及如何改进。<br>
-Bob适合做一名IT manager，Andy也可以做，也可以不做，只要他愿意。Andy只会通过控制员工数量，<br>
-并且不支持对软件做必要的更新，来把成本控制在一个底线上，直到没有任何人能再“砍倒任何一棵树”。<br>
-那时Andy的老板将会炒掉他，而雇佣两个坏小子，一睹他们如何工作。这将付出更大的代价，很显然“斧头”<br>
-不是一个好工具。</p>
-<p>或许使用斧头的人需要把它用的更好？<br>
-记住—最终，它是你的“斧头”。<br>
-我只是说说。</p>
+        <p>取模和取余的计算方式有区别，主要是对除法运算的商值进行舍入的处理方式不同，假设a、b为整数，那么<br>
+a/b 的商为c， 那么余数或者模的值为r = a - c*b。</p>
+<p>取模和取余主要是对c的舍入不同， 取模是将c向负无穷进位， 而取余是向0进位。<br>
+假设a=-7，b=3 , a/b 商为-2.x， 如果取余则为-2, 如果取模则为-3.</p>
+<ol>
+<li>取余， c=-2，r = -7 -（-2）* 3 = -1.</li>
+<li>取模， c=-3，r = -7 - (-3) * 3 = 2.</li>
+</ol>
+<p>可以看出两个值是完全不一样的，在java、c、c++中， %号运算是取余，而在python中%号运算是取模。</p>
 
       
 
@@ -597,13 +856,28 @@ Bob适合做一名IT manager，Andy也可以做，也可以不做，只要他愿
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取余</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取模</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/寓言/" class="article-tag-list-link color3">寓言</a>
+        			<a href="/categories/数值计算/" class="article-tag-list-link color5">数值计算</a>
         		</li>
       		
 		</ul>
@@ -612,7 +886,7 @@ Bob适合做一名IT manager，Andy也可以做，也可以不做，只要他愿
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/斧头的隐喻/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/08/04/取模和取余/">展开全文 >></a>
         </p>
       
 
@@ -754,198 +1028,6 @@ Git，Repo，Gerrit的简单介绍以及提交补丁时候的基本工作流程�
 
 
   
-    <article id="post-取模和取余" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/取模和取余/">取余和取模</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/04/取模和取余/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.043Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>取模和取余的计算方式有区别，主要是对除法运算的商值进行舍入的处理方式不同，假设a、b为整数，那么<br>
-a/b 的商为c， 那么余数或者模的值为r = a - c*b。</p>
-<p>取模和取余主要是对c的舍入不同， 取模是将c向负无穷进位， 而取余是向0进位。<br>
-假设a=-7，b=3 , a/b 商为-2.x， 如果取余则为-2, 如果取模则为-3.</p>
-<ol>
-<li>取余， c=-2，r = -7 -（-2）* 3 = -1.</li>
-<li>取模， c=-3，r = -7 - (-3) * 3 = 2.</li>
-</ol>
-<p>可以看出两个值是完全不一样的，在java、c、c++中， %号运算是取余，而在python中%号运算是取模。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取余</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取模</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数值计算/" class="article-tag-list-link color5">数值计算</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/取模和取余/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-上下部分占满一屏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/上下部分占满一屏/">web页面上下两部分正好占满一个屏幕</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/04/上下部分占满一屏/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.034Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>假设一个页面上有两部分，上半部分占一部分空间，下半部分要求占满屏幕剩余的空间。<br>
-设置页面的外层元素占满屏幕，设置html，body的高度为100%。</p>
-<ul>
-<li>上半部分设置一个高度，下半部分设置高度的时候用calc方法动态计算下半部分的高度，在less中使用<br>
-calc时，应该使用转义height：~‘calc(100% - 200px)’</li>
-<li>外层容器设置100%，使用flex布局，上半部分设置一个固定高度，下半部分设置flex-grow为1</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/html/" class="article-tag-list-link color5">html</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/css/" class="article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/上下部分占满一屏/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-使用百度地图离线地图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1033,94 +1115,9 @@ app中下载地图数据而不是用百度地图app下载呢，因为现在的�
 
 
   
-    <article id="post-儿童膳食" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/儿童膳食/">儿童膳食</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/04/儿童膳食/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.034Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <img src="/2018/08/04/儿童膳食/膳食.JPG" title="儿童膳食">
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">膳食</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/育儿/" class="article-tag-list-link color3">育儿</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/儿童膳食/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1215,11 +1212,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1235,11 +1232,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">native script</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">sql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">viewport</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1255,15 +1260,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">膳食</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">取余</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">取模</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">膳食</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1291,11 +1296,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vuejs</a>
+                <a href="javascript:void(0)" class="js-tag color5">多屏适配</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">native script</a>
+                <a href="javascript:void(0)" class="js-tag color1">vuejs</a>
               </li>
             
             <div class="clearfix"></div>
