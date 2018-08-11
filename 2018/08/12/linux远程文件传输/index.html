@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://goldingking.github.com">
-  <title>anchor 重复的问题 | 筋斗云</title>
+  <title>linux远程文件传输 | 筋斗云</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用react开发单页应用，页面中有一个标签栏，可以打开多个标签，每个标签中有一篇文章，文章中可能包含锚点。 问题描述： 多篇文章中可能包含相同的锚点，而react开发的是单页应用，就是说相同的锚点会同时存在，那么锚点 导航的功能就会有问题，浏览器不知道到底导航到哪一个锚点。 锚点的问题分析： 主要是命名冲突造成，如何在加入锚点时保证唯一性？  锚点的输入是用的ueditor控件输入的，uedito">
-<meta name="keywords" content="react">
+  <meta name="description" content="这两个命令是用来远程linux和的本地windows互相传送文件的，可以想象r是的recieve，s是send ，由于这两个命令都是在linux远程服务器中执行，所以相对的都是linux远程服务器。 那么，rz就是从linux远程服务器接收window传过去的文件，而sz就是从linux远程服务器向window 发送文件。">
+<meta name="keywords" content="rz,sz">
 <meta property="og:type" content="article">
-<meta property="og:title" content="anchor 重复的问题">
-<meta property="og:url" content="http://goldingking.github.com/2018/08/04/anchor问题/index.html">
+<meta property="og:title" content="linux远程文件传输">
+<meta property="og:url" content="http://goldingking.github.com/2018/08/12/linux远程文件传输/index.html">
 <meta property="og:site_name" content="筋斗云">
-<meta property="og:description" content="用react开发单页应用，页面中有一个标签栏，可以打开多个标签，每个标签中有一篇文章，文章中可能包含锚点。 问题描述： 多篇文章中可能包含相同的锚点，而react开发的是单页应用，就是说相同的锚点会同时存在，那么锚点 导航的功能就会有问题，浏览器不知道到底导航到哪一个锚点。 锚点的问题分析： 主要是命名冲突造成，如何在加入锚点时保证唯一性？  锚点的输入是用的ueditor控件输入的，uedito">
+<meta property="og:description" content="这两个命令是用来远程linux和的本地windows互相传送文件的，可以想象r是的recieve，s是send ，由于这两个命令都是在linux远程服务器中执行，所以相对的都是linux远程服务器。 那么，rz就是从linux远程服务器接收window传过去的文件，而sz就是从linux远程服务器向window 发送文件。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-04T01:07:22.031Z">
+<meta property="og:updated_time" content="2018-08-11T16:14:49.230Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="anchor 重复的问题">
-<meta name="twitter:description" content="用react开发单页应用，页面中有一个标签栏，可以打开多个标签，每个标签中有一篇文章，文章中可能包含锚点。 问题描述： 多篇文章中可能包含相同的锚点，而react开发的是单页应用，就是说相同的锚点会同时存在，那么锚点 导航的功能就会有问题，浏览器不知道到底导航到哪一个锚点。 锚点的问题分析： 主要是命名冲突造成，如何在加入锚点时保证唯一性？  锚点的输入是用的ueditor控件输入的，uedito">
+<meta name="twitter:title" content="linux远程文件传输">
+<meta name="twitter:description" content="这两个命令是用来远程linux和的本地windows互相传送文件的，可以想象r是的recieve，s是send ，由于这两个命令都是在linux远程服务器中执行，所以相对的都是linux远程服务器。 那么，rz就是从linux远程服务器接收window传过去的文件，而sz就是从linux远程服务器向window 发送文件。">
   
     <link rel="alternative" href="/atom.xml" title="筋斗云" type="application/atom+xml">
   
@@ -145,42 +145,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-anchor问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-linux远程文件传输" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      anchor 重复的问题
+      linux远程文件传输
     </h1>
   
 
         
-        <a href="/2018/08/04/anchor问题/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.031Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
+        <a href="/2018/08/12/linux远程文件传输/" class="archive-article-date">
+  	<time datetime="2018-08-11T16:11:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>用react开发单页应用，页面中有一个标签栏，可以打开多个标签，每个标签中有一篇文章，文章中可能包含锚点。</p>
-<p><strong>问题描述：</strong></p>
-<p>多篇文章中可能包含相同的锚点，而react开发的是单页应用，就是说相同的锚点会同时存在，那么锚点<br>
-导航的功能就会有问题，浏览器不知道到底导航到哪一个锚点。</p>
-<p><strong>锚点的问题分析：</strong></p>
-<p>主要是命名冲突造成，如何在加入锚点时保证唯一性？</p>
-<ol>
-<li>锚点的输入是用的ueditor控件输入的，ueditor并没有开放锚点输入时的回调函数。</li>
-<li>可以使用正则表达式来处理文本，让输入的锚点唯一，唯一性可以用uuid来保证。</li>
-<li>如果在新增文章或者编辑文章时动态替换锚点虽然可以达到效果，但是会造成锚点的意义不清晰（uuid）<br>
-，线上旧系统已经有几千篇文章，都需要改造，风险较大。</li>
-<li>我们可以仅仅在展示的时候动态替换锚点为uuid，并不影响文章中的实际内容。</li>
-</ol>
-<p><strong>代码实现：</strong></p>
-<p>写一个的函数用来将文本中的锚点转换成uuid，uuid使用随机数算法来保证唯一。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  替换文章中所有锚点为uuid, 因为一个页面的不同标签中显示的文章很可能有相同的锚点, 造成锚点功</span></span><br><span class="line"><span class="comment">  能失效, 所以需要在文章添加、编辑的时候将提交的内容中锚点替换成uuid, 防止冲突发生</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">replaceAnchor</span>(<span class="params">content</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!content) <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> linkReg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'href="#(\\S+)"'</span>, <span class="string">'g'</span>);</span><br><span class="line">    <span class="keyword">let</span> count = <span class="number">0</span>, oldIndex = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">        count ++;</span><br><span class="line">        <span class="comment">// 获取链接中的文字</span></span><br><span class="line">        <span class="keyword">const</span> linkArray = linkReg.exec(content);</span><br><span class="line">        <span class="keyword">if</span> (linkArray == <span class="literal">null</span> || linkReg.lastIndex == oldIndex || count &gt; <span class="number">10</span>) <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(linkArray);</span><br><span class="line">        oldIndex = linkReg.lastIndex;</span><br><span class="line">        <span class="keyword">const</span> anchor = linkArray[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>(anchor == <span class="literal">null</span>) <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 查找链接对应的锚点节点</span></span><br><span class="line">        <span class="keyword">const</span> anchorReg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">`name="<span class="subst">$&#123;anchor&#125;</span>"`</span>);</span><br><span class="line">        <span class="keyword">const</span> index = content.search(anchorReg);</span><br><span class="line">        <span class="keyword">if</span> (index == <span class="number">-1</span>) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取UUID</span></span><br><span class="line">        <span class="keyword">const</span> _guid = guid();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 这里需要全局替换，因为可能有多个链接，但是只能有一个对应的锚点</span></span><br><span class="line">        <span class="keyword">const</span> hrefReg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">`href="#<span class="subst">$&#123;anchor&#125;</span>"`</span>,<span class="string">'g'</span>);</span><br><span class="line">        <span class="comment">// 同时修改两块匹配内容为uuid</span></span><br><span class="line">        content = content.replace(hrefReg, <span class="string">`href="#<span class="subst">$&#123;_guid&#125;</span>"`</span>);</span><br><span class="line">        content = content.replace(anchorReg, <span class="string">`name="<span class="subst">$&#123;_guid&#125;</span>"`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(content);</span><br><span class="line">    <span class="keyword">return</span> content;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 产生一个随机数来模拟uuid</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">guid</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">s4</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.floor((<span class="number">1</span> + <span class="built_in">Math</span>.random()) * <span class="number">0x10000</span>)</span><br><span class="line">            .toString(<span class="number">16</span>)</span><br><span class="line">            .substring(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s4() + s4() + <span class="string">'-'</span> + s4() + <span class="string">'-'</span> + s4() + <span class="string">'-'</span> +</span><br><span class="line">        s4() + <span class="string">'-'</span> + s4() + s4() + s4();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>这两个命令是用来远程linux和的本地windows互相传送文件的，可以想象r是的recieve，s是send<br>
+，由于这两个命令都是在linux远程服务器中执行，所以相对的都是linux远程服务器。<br>
+那么，rz就是从linux远程服务器接收window传过去的文件，而sz就是从linux远程服务器向window<br>
+发送文件。</p>
 
       
 
@@ -225,7 +213,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">rz</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sz</a>
         		</li>
       		
 		</ul>
@@ -281,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://goldingking.github.com/2018/08/04/anchor问题/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://goldingking.github.com/2018/08/12/linux远程文件传输/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -295,18 +287,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/04/nativescript入门/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          native script 入门
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/04/MD5输出16进制字符串/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MD5输出16进制字符串</div>
+    <a href="/2018/08/08/web前端高清方案/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">web前端高清方案</div>
       <i class="icon-circle-right"></i>
     </a>
   
