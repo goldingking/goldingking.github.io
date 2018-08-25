@@ -142,6 +142,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-javascript如何实现继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/25/javascript如何实现继承/">javascript如何实现继承</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/25/javascript如何实现继承/" class="archive-article-date">
+  	<time datetime="2018-08-25T13:15:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>javascript继承方式中最优的方式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 寄生组合式继承</span></span><br><span class="line"><span class="comment"> * @author wangxin</span></span><br><span class="line"><span class="comment"> * @date 2018/08/25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.super_property = <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SuperType.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.sub_property = <span class="literal">false</span>;</span><br><span class="line">    SuperType.call(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">subTypePrototype</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">subTypePrototype.prototype = SuperType.prototype;</span><br><span class="line"></span><br><span class="line">SubType.prototype = <span class="keyword">new</span> subTypePrototype();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> subTypeInstance = <span class="keyword">new</span> SubType();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(subTypeInstance.super_property);</span><br><span class="line">subTypeInstance.sayHello();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> subTypeInstance1 = <span class="keyword">new</span> SubType();</span><br><span class="line">subTypeInstance1.super_property = <span class="string">"changed"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(subTypeInstance1.super_property);</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">inheritance</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/25/javascript如何实现继承/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-linux远程文件传输" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -684,114 +763,6 @@ Group by的select关键字跟的列只能是用来表示这个分组的信息，
 
 
   
-    <article id="post-快捷键的思考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/快捷键的思考/">快捷键的思考</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/04/快捷键的思考/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.055Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>家中有两台电脑，一台mac，一台pc。mac主要用来编程和办公，pc主要用来玩游戏。公司还有一台pc用来办公。<br>
-这就涉及到两个平台之间的切换问题，mac和pc的快捷键不太一样，比如ctrl+c复制在mac上是command+v，还有<br>
-同一个软件的两个平台使用的快捷键也不一样，我经常用的idea软件就是这样。</p>
-<p>idea软件中可以选择快捷键类型，我选择eclipse类型后，在mac上和windows上使用习惯就一致了。<br>
-mac chrome中常用的快捷键：<br>
-command+back 才是删除<br>
-command+R 相当于F5<br>
-command+tab用来切换不同的程序，contr+tab可以在chrome中切换不同的标签。</p>
-<p>在mac中如何快速的搜索文件?<br>
-command+alt+D ，进入搜索页面。 这些快捷键都可以在配置中找到。</p>
-<p>如何快速打开launch pad？<br>
-我在快捷键中自己定义了快捷键，command+alt+l来打开launch pad。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">windows</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">idea</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hotkey</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/效率/" class="article-tag-list-link color3">效率</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/快捷键的思考/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-斧头的隐喻" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -900,35 +871,38 @@ Bob适合做一名IT manager，Andy也可以做，也可以不做，只要他愿
 
 
   
-    <article id="post-取模和取余" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-快捷键的思考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/取模和取余/">取余和取模</a>
+      <a class="article-title" href="/2018/08/04/快捷键的思考/">快捷键的思考</a>
     </h1>
   
 
         
-        <a href="/2018/08/04/取模和取余/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.043Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
+        <a href="/2018/08/04/快捷键的思考/" class="archive-article-date">
+  	<time datetime="2018-08-04T01:07:22.055Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>取模和取余的计算方式有区别，主要是对除法运算的商值进行舍入的处理方式不同，假设a、b为整数，那么<br>
-a/b 的商为c， 那么余数或者模的值为r = a - c*b。</p>
-<p>取模和取余主要是对c的舍入不同， 取模是将c向负无穷进位， 而取余是向0进位。<br>
-假设a=-7，b=3 , a/b 商为-2.x， 如果取余则为-2, 如果取模则为-3.</p>
-<ol>
-<li>取余， c=-2，r = -7 -（-2）* 3 = -1.</li>
-<li>取模， c=-3，r = -7 - (-3) * 3 = 2.</li>
-</ol>
-<p>可以看出两个值是完全不一样的，在java、c、c++中， %号运算是取余，而在python中%号运算是取模。</p>
+        <p>家中有两台电脑，一台mac，一台pc。mac主要用来编程和办公，pc主要用来玩游戏。公司还有一台pc用来办公。<br>
+这就涉及到两个平台之间的切换问题，mac和pc的快捷键不太一样，比如ctrl+c复制在mac上是command+v，还有<br>
+同一个软件的两个平台使用的快捷键也不一样，我经常用的idea软件就是这样。</p>
+<p>idea软件中可以选择快捷键类型，我选择eclipse类型后，在mac上和windows上使用习惯就一致了。<br>
+mac chrome中常用的快捷键：<br>
+command+back 才是删除<br>
+command+R 相当于F5<br>
+command+tab用来切换不同的程序，contr+tab可以在chrome中切换不同的标签。</p>
+<p>在mac中如何快速的搜索文件?<br>
+command+alt+D ，进入搜索页面。 这些快捷键都可以在配置中找到。</p>
+<p>如何快速打开launch pad？<br>
+我在快捷键中自己定义了快捷键，command+alt+l来打开launch pad。</p>
 
       
 
@@ -942,11 +916,19 @@ a/b 的商为c， 那么余数或者模的值为r = a - c*b。</p>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取余</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取模</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">windows</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">idea</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hotkey</a>
         		</li>
       		
 		</ul>
@@ -958,7 +940,7 @@ a/b 的商为c， 那么余数或者模的值为r = a - c*b。</p>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/数值计算/" class="article-tag-list-link color5">数值计算</a>
+        			<a href="/categories/效率/" class="article-tag-list-link color3">效率</a>
         		</li>
       		
 		</ul>
@@ -967,7 +949,7 @@ a/b 的商为c， 那么余数或者模的值为r = a - c*b。</p>
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/取模和取余/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/08/04/快捷键的思考/">展开全文 >></a>
         </p>
       
 
@@ -1226,6 +1208,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">inheritance</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">rz</a>
               </li>
              
@@ -1258,6 +1248,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">calc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">膳食</a>
               </li>
              
@@ -1267,14 +1261,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">取模</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AOSP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">gerrit</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1294,7 +1280,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">多屏适配</a>
+                <a href="javascript:void(0)" class="js-tag color5">AOSP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">gerrit</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1302,7 +1292,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">calc</a>
+                <a href="javascript:void(0)" class="js-tag color5">多屏适配</a>
               </li>
             
             <div class="clearfix"></div>

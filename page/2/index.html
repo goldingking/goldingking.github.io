@@ -142,114 +142,35 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-使用百度地图离线地图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-取模和取余" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/使用百度地图离线地图/">百度地图使用离线地图</a>
+      <a class="article-title" href="/2018/08/04/取模和取余/">取余和取模</a>
     </h1>
   
 
         
-        <a href="/2018/08/04/使用百度地图离线地图/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.034Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
+        <a href="/2018/08/04/取模和取余/" class="archive-article-date">
+  	<time datetime="2018-08-04T01:07:22.043Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>百度以前支持在app中外带一个离线地图包，然后不用联网就可以使用离线地图了，从v3.6版本以后就不支持<br>
-这样做了，只支持在程序内下载，但是引导用户在程序内下载还需要提供界面，比较麻烦，我介绍一种方式可<br>
-以继续像以前一样提供离线包来使用离线地图。</p>
-<p>基本思路是：在你的程序中用代码下载你需要的离线地图数据，然后把这些数据打包成zip包放到你的apk包中<br>
-然后你就可以删除掉你下载离线地图数据的代码了，这部分代码仅仅是为了下载地图使用，为什么要在我们的<br>
-app中下载地图数据而不是用百度地图app下载呢，因为现在的地图信息中包含了跟你app唯一绑定的信息，你<br>
-的app是无法使用别的app下载的地图的！</p>
-<p>下载地图数据的代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">SDKInitializer.initialize(context);</span><br><span class="line">MKOfflineMap mOffline = <span class="keyword">new</span> MKOfflineMap();</span><br><span class="line"><span class="comment">// 传入接口事件，离线地图更新会触发该回调</span></span><br><span class="line">mOffline.init(<span class="keyword">new</span> MKOfflineMapListener()&#123;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onGetOfflineMapState</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> i1)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 开始下载离线地图，传入参数为cityID, cityID表示城市的数字标识。</span></span><br><span class="line">mOffline.start(<span class="number">177</span>);</span><br></pre></td></tr></table></figure>
-<p>使用上面的代码传入你需要城市的id值，就可以下载那个城市的地图了，id值可以从网上查<br>
-下载的地图数据会被放在<code>EnvironmentUtilities.getAppSDCardPath()</code>下面，这个类是百度的api<br>
-具体会指向 /storage/emulated/0/Android/data/[your app package name]/files, 在这个文件夹下会生成<br>
-一个BaiduMapSDKNew文件夹，里面的地图信息就是我们需要的数据信息， 把它们打包成zip放入app中<br>
-等程序启动时将zip包恢复到上面那个路径下面就可以使用离线地图了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/使用百度地图离线地图/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-儿童膳食" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/儿童膳食/">儿童膳食</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/04/儿童膳食/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.034Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <img src="/2018/08/04/儿童膳食/膳食.JPG" title="儿童膳食">
+        <p>取模和取余的计算方式有区别，主要是对除法运算的商值进行舍入的处理方式不同，假设a、b为整数，那么<br>
+a/b 的商为c， 那么余数或者模的值为r = a - c*b。</p>
+<p>取模和取余主要是对c的舍入不同， 取模是将c向负无穷进位， 而取余是向0进位。<br>
+假设a=-7，b=3 , a/b 商为-2.x， 如果取余则为-2, 如果取模则为-3.</p>
+<ol>
+<li>取余， c=-2，r = -7 -（-2）* 3 = -1.</li>
+<li>取模， c=-3，r = -7 - (-3) * 3 = 2.</li>
+</ol>
+<p>可以看出两个值是完全不一样的，在java、c、c++中， %号运算是取余，而在python中%号运算是取模。</p>
 
       
 
@@ -263,7 +184,11 @@ app中下载地图数据而不是用百度地图app下载呢，因为现在的�
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">膳食</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取余</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取模</a>
         		</li>
       		
 		</ul>
@@ -275,7 +200,7 @@ app中下载地图数据而不是用百度地图app下载呢，因为现在的�
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/育儿/" class="article-tag-list-link color3">育儿</a>
+        			<a href="/categories/数值计算/" class="article-tag-list-link color5">数值计算</a>
         		</li>
       		
 		</ul>
@@ -284,7 +209,7 @@ app中下载地图数据而不是用百度地图app下载呢，因为现在的�
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/儿童膳食/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/08/04/取模和取余/">展开全文 >></a>
         </p>
       
 
@@ -409,28 +334,27 @@ calc时，应该使用转义height：~‘calc(100% - 200px)’</li>
 
 
   
-    <article id="post-nativescript入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-儿童膳食" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/nativescript入门/">native script 入门</a>
+      <a class="article-title" href="/2018/08/04/儿童膳食/">儿童膳食</a>
     </h1>
   
 
         
-        <a href="/2018/08/04/nativescript入门/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.032Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
+        <a href="/2018/08/04/儿童膳食/" class="archive-article-date">
+  	<time datetime="2018-08-04T01:07:22.034Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在找一个基于vuejs开发native程序的方案，主要有两个方案，第一个是阿里的weex，目前只有国内在用。<br>
-另外一个是新起之秀，不仅可以支持vuejs还可以支持angular，社区氛围比较好，所以选这个进行研究。</p>
+        <img src="/2018/08/04/儿童膳食/膳食.JPG" title="儿童膳食">
 
       
 
@@ -444,7 +368,7 @@ calc时，应该使用转义height：~‘calc(100% - 200px)’</li>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">native script</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">膳食</a>
         		</li>
       		
 		</ul>
@@ -456,7 +380,7 @@ calc时，应该使用转义height：~‘calc(100% - 200px)’</li>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/h5/" class="article-tag-list-link color3">h5</a>
+        			<a href="/categories/育儿/" class="article-tag-list-link color3">育儿</a>
         		</li>
       		
 		</ul>
@@ -465,7 +389,187 @@ calc时，应该使用转义height：~‘calc(100% - 200px)’</li>
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/nativescript入门/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/08/04/儿童膳食/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-使用百度地图离线地图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/04/使用百度地图离线地图/">百度地图使用离线地图</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/04/使用百度地图离线地图/" class="archive-article-date">
+  	<time datetime="2018-08-04T01:07:22.034Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>百度以前支持在app中外带一个离线地图包，然后不用联网就可以使用离线地图了，从v3.6版本以后就不支持<br>
+这样做了，只支持在程序内下载，但是引导用户在程序内下载还需要提供界面，比较麻烦，我介绍一种方式可<br>
+以继续像以前一样提供离线包来使用离线地图。</p>
+<p>基本思路是：在你的程序中用代码下载你需要的离线地图数据，然后把这些数据打包成zip包放到你的apk包中<br>
+然后你就可以删除掉你下载离线地图数据的代码了，这部分代码仅仅是为了下载地图使用，为什么要在我们的<br>
+app中下载地图数据而不是用百度地图app下载呢，因为现在的地图信息中包含了跟你app唯一绑定的信息，你<br>
+的app是无法使用别的app下载的地图的！</p>
+<p>下载地图数据的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">SDKInitializer.initialize(context);</span><br><span class="line">MKOfflineMap mOffline = <span class="keyword">new</span> MKOfflineMap();</span><br><span class="line"><span class="comment">// 传入接口事件，离线地图更新会触发该回调</span></span><br><span class="line">mOffline.init(<span class="keyword">new</span> MKOfflineMapListener()&#123;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onGetOfflineMapState</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> i1)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 开始下载离线地图，传入参数为cityID, cityID表示城市的数字标识。</span></span><br><span class="line">mOffline.start(<span class="number">177</span>);</span><br></pre></td></tr></table></figure>
+<p>使用上面的代码传入你需要城市的id值，就可以下载那个城市的地图了，id值可以从网上查<br>
+下载的地图数据会被放在<code>EnvironmentUtilities.getAppSDCardPath()</code>下面，这个类是百度的api<br>
+具体会指向 /storage/emulated/0/Android/data/[your app package name]/files, 在这个文件夹下会生成<br>
+一个BaiduMapSDKNew文件夹，里面的地图信息就是我们需要的数据信息， 把它们打包成zip放入app中<br>
+等程序启动时将zip包恢复到上面那个路径下面就可以使用离线地图了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/" class="article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/04/使用百度地图离线地图/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-fiddler拦截https请求转为http请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/04/fiddler拦截https请求转为http请求/">fiddler 拦截https请求转为http请求</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/04/fiddler拦截https请求转为http请求/" class="archive-article-date">
+  	<time datetime="2018-08-04T01:07:22.032Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们在开发测试过程中，经常需要通过fiddler来查看网络请求详情，有时候需要把https的请求转成http请求<br>
+，因为我们的测试环境只支持http，可以修改fiddler的custom rules脚本来实现。</p>
+<p>菜单栏中点击Rules -&gt; Customize Rules… 打开配置文件，或者使用快捷键Ctrol + R, 打开配置文件：<br>
+找到如下方法, 并在方法中添加判断逻辑如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">OnBeforeRequest</span>(<span class="params">oSession: Session</span>) </span>&#123;</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 将https://wwww.example.com变成http://www.example.com</span></span><br><span class="line">  <span class="keyword">if</span> (oSession.HostnameIs(<span class="string">"www.example.com"</span>) ) &#123;  </span><br><span class="line">    <span class="comment">// Handle CONNECT Tunnels</span></span><br><span class="line">    <span class="keyword">if</span> (oSession.HTTPMethodIs(<span class="string">"CONNECT"</span>))</span><br><span class="line">    &#123;</span><br><span class="line">      oSession[<span class="string">"x-replywithtunnel"</span>] = <span class="string">"FakeTunnel"</span>;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;           </span><br><span class="line">    oSession.fullUrl = <span class="string">"http://www.example.com"</span> + oSession.PathAndQuery;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">fiddler</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">https</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/TCP/IP/" class="article-tag-list-link color2">TCP/IP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/04/fiddler拦截https请求转为http请求/">展开全文 >></a>
         </p>
       
 
@@ -603,6 +707,92 @@ calc时，应该使用转义height：~‘calc(100% - 200px)’</li>
 
 
   
+    <article id="post-nativescript入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/04/nativescript入门/">native script 入门</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/04/nativescript入门/" class="archive-article-date">
+  	<time datetime="2018-08-04T01:07:22.032Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在找一个基于vuejs开发native程序的方案，主要有两个方案，第一个是阿里的weex，目前只有国内在用。<br>
+另外一个是新起之秀，不仅可以支持vuejs还可以支持angular，社区氛围比较好，所以选这个进行研究。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">native script</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/h5/" class="article-tag-list-link color3">h5</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/04/nativescript入门/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-fiddler解密https数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -704,99 +894,6 @@ calc时，应该使用转义height：~‘calc(100% - 200px)’</li>
 
 
   
-    <article id="post-fiddler拦截https请求转为http请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/fiddler拦截https请求转为http请求/">fiddler 拦截https请求转为http请求</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/04/fiddler拦截https请求转为http请求/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.032Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我们在开发测试过程中，经常需要通过fiddler来查看网络请求详情，有时候需要把https的请求转成http请求<br>
-，因为我们的测试环境只支持http，可以修改fiddler的custom rules脚本来实现。</p>
-<p>菜单栏中点击Rules -&gt; Customize Rules… 打开配置文件，或者使用快捷键Ctrol + R, 打开配置文件：<br>
-找到如下方法, 并在方法中添加判断逻辑如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">OnBeforeRequest</span>(<span class="params">oSession: Session</span>) </span>&#123;</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 将https://wwww.example.com变成http://www.example.com</span></span><br><span class="line">  <span class="keyword">if</span> (oSession.HostnameIs(<span class="string">"www.example.com"</span>) ) &#123;  </span><br><span class="line">    <span class="comment">// Handle CONNECT Tunnels</span></span><br><span class="line">    <span class="keyword">if</span> (oSession.HTTPMethodIs(<span class="string">"CONNECT"</span>))</span><br><span class="line">    &#123;</span><br><span class="line">      oSession[<span class="string">"x-replywithtunnel"</span>] = <span class="string">"FakeTunnel"</span>;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;           </span><br><span class="line">    oSession.fullUrl = <span class="string">"http://www.example.com"</span> + oSession.PathAndQuery;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">fiddler</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">https</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/TCP/IP/" class="article-tag-list-link color2">TCP/IP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/fiddler拦截https请求转为http请求/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-anchor问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -857,101 +954,6 @@ calc时，应该使用转义height：~‘calc(100% - 200px)’</li>
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/08/04/anchor问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-H5多屏幕适配" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/H5多屏幕适配/">h5多屏适配</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/04/H5多屏幕适配/" class="archive-article-date">
-  	<time datetime="2018-08-04T01:07:22.030Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我们在编程过程中用到的px，并不是指屏幕上物理的像素点，而是指逻辑像素。逻辑像素在不同的屏幕上，<br>
-用不同数量的物理像素表示一个逻辑px。</p>
-<p>dpr是指device pixel ratio， 设备像素比， 代表一个物理像素的数量和逻辑像素的数量的比， 当dpr<br>
-为1时，逻辑像素和物理像素1：1的关系。</p>
-<p>逻辑像素相同的情况下，在不同的手机上，大小应该是相同的.</p>
-<p>在72ppi的情况下，文字显示出来的大小正好和打印的大小一致。<br>
-打印品需要把ppi设置成300，才有真实感。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">px</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">rem</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/h5/" class="article-tag-list-link color3">h5</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/H5多屏幕适配/">展开全文 >></a>
         </p>
       
 
@@ -1206,6 +1208,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">inheritance</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">rz</a>
               </li>
              
@@ -1238,6 +1248,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">calc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">膳食</a>
               </li>
              
@@ -1247,14 +1261,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">取模</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AOSP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">gerrit</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1274,7 +1280,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">多屏适配</a>
+                <a href="javascript:void(0)" class="js-tag color5">AOSP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">gerrit</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1282,7 +1292,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">calc</a>
+                <a href="javascript:void(0)" class="js-tag color5">多屏适配</a>
               </li>
             
             <div class="clearfix"></div>
