@@ -3,7 +3,7 @@
   {%- include head.html -%}
 
   <body>
-    <div class="your-clock" style="margin-top:0;transform: scale(.5) translateY(-50%) translateX(-50%);position:absolute;top:0;left:0;min-height:initial;"></div>
+    <div class="your-clock clock"></div>
     <div class="waifu">
       <div class="waifu-tips"></div>
       <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
@@ -37,6 +37,6 @@
     </script>
 
     <!-- canvas-nested -->
-    <script src="{{ "/assets/background/canvas-nested.js" | relative_url }}"></script>
+    <!-- <script src="{{ "/assets/background/canvas-nested.js" | relative_url }}"></script> -->
   </body>
 </html>

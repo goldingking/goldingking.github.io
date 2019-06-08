@@ -1,0 +1,18 @@
+
+@media screen and (min-width: 1200px) {
+    .clock {
+        margin-top:0 !important;
+        transform: scale(.33) translateY(-100%) translateX(-100%);
+        position: absolute !important;
+
+        left: 0;
+        min-height: initial !important;
+        display: block;
+    }
+}
+
+@media not screen and (min-width: 1200px) {
+    .clock {
+        display: none;
+    }
+}
