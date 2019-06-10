@@ -1,7 +1,7 @@
 {
 	"type": "Live2D Model Setting",
 	"name": "model",
-	"model": "model.moc",
+	"model": "http://psvv3b8xn.bkt.clouddn.com/model.moc",
 	"textures": [
 		"http://psvv3b8xn.bkt.clouddn.com/texture_00.png"
 	],
