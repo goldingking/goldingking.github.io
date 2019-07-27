@@ -12,11 +12,11 @@ tag: 教程
 
 在github上创建一个仓库地址，仓库名为[github用户名].github.io, 在此仓库中上传一个
 
-[Jekyll]: https://jekyllrb.com/	"Jekyll官方网站"
-
 项目，github自动编译成静态网站，并可以使用[github用户名].github.io来访问。
 
 
+
+此项目是基于jekyll生成的工程
 
 
 
