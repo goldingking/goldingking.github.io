@@ -4,4 +4,4 @@ title: 关于
 permalink: /about/
 ---
 
-![自我介绍](/assets/intro.jpeg)
+程序员，欢迎技术交流
