@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "在github上托管静态网站"
-date:   2019-07-27 09:27:23 +0800
+title:  "如何在github上托管静态网站"
+date:   2019-07-27 09:33:23 +0800
 categories: github
 tag: 教程
 ---
@@ -10,17 +10,9 @@ tag: 教程
 
 本文主题是如何快速搭建一个基于github的静态网站
 
-在github上创建一个仓库地址，仓库名为[github用户名].github.io, 在此仓库中上传一个
+在github上创建一个仓库地址，仓库名为[github用户名].github.io, 在此仓库中上传一个项目，github自动编译成静态网站，并可以使用[github用户名].github.io来访问。
 
-项目，github自动编译成静态网站，并可以使用[github用户名].github.io来访问。
-
-
-
-此项目是基于jekyll生成的工程
-
-
-
-来看下jekyll网站的工程结构
+此项目是基于[jekyll](https://jekyllrb.com/)生成的工程的，我们来看下jekyll网站的工程结构。
 
 ```
 ├─assets #一些静态资源，比如图片
