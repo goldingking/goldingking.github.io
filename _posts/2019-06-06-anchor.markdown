@@ -23,7 +23,7 @@ tag: 问题
 
 **代码实现：**
 
-写一个的函数用来将文本中的锚点转换成uuid，uuid使用随机数算法来保证唯一。
+写一个的函数用来将文本中的锚点转换成uuid，uuid使用	随机数算法来保证唯一。
 {% highlight javascript %}
 /**
   替换文章中所有锚点为uuid, 因为一个页面的不同标签中显示的文章很可能有相同的锚点, 造成锚点功
@@ -39,20 +39,20 @@ export function replaceAnchor(content) {
         // 获取链接中的文字
         const linkArray = linkReg.exec(content);
         if (linkArray == null || linkReg.lastIndex == oldIndex || count > 10) break;
-
+    
         console.log(linkArray);
         oldIndex = linkReg.lastIndex;
         const anchor = linkArray[1];
         if(anchor == null) break;
-
+    
         // 查找链接对应的锚点节点
         const anchorReg = new RegExp(`name="${anchor}"`);
         const index = content.search(anchorReg);
         if (index == -1) continue;
-
+    
         // 获取UUID
         const _guid = guid();
-
+    
         // 这里需要全局替换，因为可能有多个链接，但是只能有一个对应的锚点
         const hrefReg = new RegExp(`href="#${anchor}"`,'g');
         // 同时修改两块匹配内容为uuid
