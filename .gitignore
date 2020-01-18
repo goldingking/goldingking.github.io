@@ -1,3 +1,8 @@
 _site
 .sass-cache
 .jekyll-metadata
+.idea/vcs.xml
+.idea/goldingking.github.io.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
