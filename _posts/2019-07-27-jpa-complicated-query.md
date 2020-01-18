@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "JPA分页查询中缺陷"
-categories: 数据库
+categories: database
 tag: JPA
 ---
 

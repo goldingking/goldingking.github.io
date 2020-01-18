@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "贝叶斯定律"
-categories: 考题
+categories: examination
 tag: probability
 ---
 

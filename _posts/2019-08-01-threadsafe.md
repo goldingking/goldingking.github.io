@@ -2,7 +2,7 @@
 layout: post
 title:  "线程安全"
 categories: java
-tag:thread
+tag: thread
 ---
 
 [栈帧](https://www.jianshu.com/p/b666213cdd8a)：函数调用时会使用堆栈这个数据结构来存当前函数的参数、要返回的地址，这些数据形成一帧，就是栈帧，每个函数的栈帧独立，不会互相影响，所以在多线程情况下，函数调用如果不涉及处理类的公共变量，那么就是线程安全的

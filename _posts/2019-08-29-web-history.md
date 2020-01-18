@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  前端编年史
-category: 前端
+category: web
 ---
 
 

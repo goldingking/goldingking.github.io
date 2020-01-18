@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "数据库范式"
-categories: 考题
+categories: examination
 tag: database
 ---
 

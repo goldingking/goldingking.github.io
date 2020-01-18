@@ -3,7 +3,6 @@ layout: post
 title:  "如何在github上托管静态网站"
 date:   2019-07-27 09:33:23 +0800
 categories: github
-tag: 教程
 ---
 
 

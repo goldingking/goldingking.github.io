@@ -39,3 +39,6 @@ lang: zh
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+encoding: utf-8
+kramdown:
+   input: GFM
