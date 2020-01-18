@@ -16,6 +16,10 @@
       </div>
     </main>
 
+    <div id="back-top">
+      <a href="#top" title="回到顶部"></a>
+    </div>
+
     {%- include footer.html -%}
     <!-- timer -->
     <script src="{{ "/assets/time/js/flipclock/jquery-1.9.1.min.js" | relative_url }}"></script>
@@ -49,6 +53,26 @@
           appId: 'oa919Jd1iMOiGmiYxugoJa0p',
           appKey: 'w9rOPaKHRTvS3mTrej6VpIbV'
       })
+    </script>
+
+    <!-- 回到顶部的逻辑   -->
+    <script>
+      $("#back-top").hide();
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+            $('#back-top').fadeIn();
+          } else {
+            $('#back-top').fadeOut();
+          }
+        });
+        $('#back-top a').click(function () {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 800);
+          return false;
+        });
+      });
     </script>
   </body>
 </html>

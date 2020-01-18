@@ -1,4 +1,3 @@
-
 @media screen and (min-width: 1200px) {
     .clock {
         margin-top:0 !important;
@@ -15,4 +14,28 @@
     .clock {
         display: none;
     }
+}
+
+/* 回到顶部 */
+#back-top {
+    position: fixed;
+    bottom: 30px;
+    right: 100px;
+}
+#back-top a {
+    width: 54px;
+    height: 54px;
+    display: block;
+    background: #ddd url(./arrow-up-solid.svg) no-repeat center center;
+    background-size: 80% 80%;
+    background-color: #aaa;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+#back-top a:hover {
+    background-color: #777;
 }
