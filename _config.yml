@@ -29,6 +29,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-toc
+  - jekyll-paginate
   # - jekyll-feed
 lang: zh
 # Exclude from processing.
@@ -45,3 +46,4 @@ lang: zh
 encoding: utf-8
 kramdown:
    input: GFM
+paginate: 20

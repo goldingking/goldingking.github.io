@@ -1,7 +1,6 @@
 ---
 layout: post
 title: jekyll的基本用法
-permalink: /for-your-information
 ---
 
 
