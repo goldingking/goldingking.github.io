@@ -3,7 +3,7 @@
 	"name": "model",
 	"model": "model.moc",
 	"textures": [
-		"http://psvv3b8xn.bkt.clouddn.com/texture_00.png"
+		"model.2048/texture_00.png"
 	],
 	"motions":{
 		"idle":[
