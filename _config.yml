@@ -28,8 +28,8 @@ github_username:  goldingking
 markdown: kramdown
 theme: minima
 plugins:
-  - jekyll-feed
   - jekyll-toc
+  # - jekyll-feed
 lang: zh
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
