@@ -46,4 +46,4 @@ lang: zh
 encoding: utf-8
 kramdown:
    input: GFM
-paginate: 20
+paginate: 9
